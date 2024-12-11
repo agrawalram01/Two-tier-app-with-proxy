@@ -16,3 +16,11 @@ services:
       - "8080:8080"
     depends_on:
       - postgres
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - tomcat
+  
